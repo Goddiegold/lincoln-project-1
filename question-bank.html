@@ -1,62 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="question-bank.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Lincoln</title>
 
-</head>
+    <style>
+      body {
+        /* background: #afafaf !important; */
+        background: #f5f5f5 !important;
+      }
 
-<body>
-    <div class="container left-auto right-auto question_bank-container">
-        <!-- <div class="row row-cols-2">
-            <div class="col bg-danger rounded-2">Column 1</div>
-            <div class="col bg-danger rounded-2">Column 2</div>
-        </div> -->
-        <div class="question_bank-section-1">
-            <h4>Question Bank</h4>
-            <select class="form-select" style="width: 210px;">
-                <option>RN Practice Questions</option>
-                <option>Clinical / MBBS (MBChB) </option>
-                <option>Pre-Clinical / MBBS (MBChB)</option>
-            </select>
+      .progress {
+        height: 5px !important;
+      }
+
+      .charts {
+        min-height: 200px !important;
+      }
+
+      .btn-details {
+        --bs-btn-bg: transparent;
+        --bs-btn-color: --bs-danger;
+      }
+
+      .form-check-input:checked {
+        background-color: red;
+        border-color: pink;
+      }
+
+      .form-switch .form-check-input {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='red'/%3e%3c/svg%3e");
+      }
+      .form-switch .form-check-input:focus {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='pink'/%3e%3c/svg%3e");
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container min-vh-100 w-75">
+      <div class="d-flex flex-column min-vh-100">
+        <div class="flex-column m-0">
+          <h4 class="my-4">Question Bank</h4>
+          <div class="dropdown my-3">
+            <button
+              class="btn btn-light dropdown-toggle border-2 border-danger"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              RN Practice Questions
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">RN Practice Questions</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Clinical / MBBS (MBChB)</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Pre-Clinical / MBBS (MBChB)</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="col justify-content-center">
-            <div class="row">
-                <div class="col-5 shadow-sm rounded-3 p-4" style="margin-right: 20px; background-color: white;">
-                    <h4> <i class="fa-solid fa-book text-danger"></i> Custom Tests</h4>
-                    Configure custom tests by choosing test modes, number of questions, subjects, and systems.
-                </div>
-
-                <div class="col-5 shadow-sm rounded-3 p-4" style="background-color: white;">
-                    <h4> <i class="fa-solid fa-book text-danger"></i> Learning Paths</h4>
-                    Prepare for your exam with schedules, practice exams, and self-assessments created by teaching
-                    experts.
-                </div>
+        <div class="flex-column m-0">
+          <div class="d-flex flex-row w-100 my-4 mx-0 justify-content-between">
+            <div class="d-flex flex-column col-6 px-0 pe-3">
+              <div class="col-12 shadow rounded-4 p-4 bg-white">
+                <h5>
+                  <i class="fa-solid fa-book text-danger me-3"></i> Custom Tests
+                </h5>
+                <p>
+                  <small>
+                    Configure custom tests by choosing test modes, number of
+                    questions, subjects, and systems.
+                  </small>
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-danger text-uppercase fw-semibold"
+                >
+                  Prepare for your exam
+                </button>
+              </div>
             </div>
 
-
-            <div class="row">
-                <div class="bg-danger rounded-3 p-4 performance-and-adaptive_review">Column 1</div>
+            <div class="d-flex flex-column col-6 px-0 ps-3">
+              <div class="col-12 shadow rounded-4 p-4 bg-white">
+                <h5>
+                  <i class="fa-solid fa-book text-danger me-3"></i> Learning
+                  Paths
+                </h5>
+                <p>
+                  <small>
+                    Prepare for your exam with schedules, practice exams, and
+                    self-assessments created by teaching experts.
+                  </small>
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-danger text-uppercase fw-semibold"
+                >
+                  Prepare for your exam
+                </button>
+              </div>
             </div>
+          </div>
+
+          <div class="flex-column w-100 my-4">
+            <div class="flex-row px-3 py-3 rounded-4 bg-white shadow">
+              <div
+                class="d-flex flex-row justify-content-between align-items-center my-3"
+              >
+                <h4>Performance & Adaptive Review</h4>
+                <i class="fa fa-info-circle fs-5"></i>
+              </div>
+              <div class="d-flex flex-column my-3">
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center mb-1"
+                >
+                  <span><strong>946/3785</strong> questions answered</span>
+                  <span class="">25%</span>
+                </div>
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Question Completion"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar bg-danger" style="width: 25%"></div>
+                </div>
+              </div>
+              <!-- Insert Charts Here! -->
+              <div class="d-flex flex-column">
+                <div
+                  class="d-flex flex-row w-100 h-100 justify-content-center align-items-center charts"
+                >
+                  <h4>Insert Charts Here</h4>
+                </div>
+              </div>
+              <!-- End of Charts -->
+              <div class="d-flex flex-row w-50">
+                <div class="d-flex flex-column col-6">
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexSwitchCheckDefault"
+                      >Limit to latest attempt
+                    </label>
+                  </div>
+                </div>
+                <div class="d-flex flex-column col-6">
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexSwitchCheckDefault"
+                      >Include omitted questions
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn text-danger text-uppercase fw-semibold px-1 bg-transparent mt-3"
+              >
+                Details
+              </button>
+            </div>
+          </div>
         </div>
-
-        <!-- <div class="row justify-content-center" style="max-width:100%"> -->
-        <!-- </div> -->
-
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
