@@ -33,6 +33,58 @@
     .study-planner-cursor {
         cursor: pointer;
     }
+
+    .nav-pills>.nav-item>.nav-link.active {
+        background: #dc3545 !important;
+        color: white !important;
+    }
+
+    .nav-pills>.nav-item>.nav-link {
+        color: black !important;
+    }
+
+    .nav-link {
+        color: black !important;
+    }
+
+    .course-container {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .section-tasks {
+        cursor: pointer;
+        /* background: #dc3545;  */
+    }
+
+
+    .due-date {
+        margin-top: -4px;
+        margin-right: 10px;
+        background: white !important;
+        /* background-color: #f5f5f5 !important; */
+        width: 180px;
+        text-align: center;
+        padding: 2px;
+        font-size: smaller;
+        color: #dc3545;
+        border-radius: 10px;
+        border: #dc3545 1px solid !important;
+    }
+
+    .task-overdue {
+        width: 20px;
+        height: 20px;
+        /* background-color: wheat; */
+        margin-top: 3px;
+        background-color: #dc3545;
+        border-radius: 20px;
+    }
+
+    .task-status{
+        margin-top: -4px;
+        font-size: smaller  ;
+    }
 </style>
 
 <body>
@@ -172,19 +224,114 @@
                             </ul>
                         </div>
 
-
-
-
                     </div>
 
 
                 </div>
 
-                <div class="d-flex justify-content-evenly" style="margin-bottom: 40px;">
-                    <h5 class="study-planner-cursor">ALL</h5>
-                    <h5 class="study-planner-cursor">ASSIGNMENTS</h5>
-                    <h5 class="study-planner-cursor">PERSONAL TASKS
+                <ul class="nav nav-pills d-flex justify-content-evenly" role="tablist" style="margin-top: 20px;">
+                    <li class="nav-item">
+                        <a class="text-dark nav-link active" data-bs-toggle="pill" data-toggle="tab"
+                            href="#home">ALL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link" data-bs-toggle="pill" href="#menu1">ASSIGNMENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark nav-link" data-bs-toggle="pill" href="#menu2">PERSONAL TASKS</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane tab-pane active">
+                        <div class="d-flex flex-row justify-content-between section-tasks" style="margin-top: 20px;">
+                            <!-- <h1>dog</h1> -->
+                            <div class="d-flex flex-row justify-content-between p-2">
+
+                                <i class="fa-solid fa-circle-info"
+                                    style="font-size: larger; margin-top: 17px;margin-left: -6px;"></i>
+
+                                <div class="course-container">
+                                    <h6 class="fs-6">Foundational Neuroscience (COMAT)</h6>
+                                    <div class="d-flex flex-row">
+                                        <div class="bg-danger due-date">Due: May 27, 2023 4:59pm</div> <span
+                                        class="task-status"
+                                            style="color:#7c7575">Learning Path</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="d-flex flex-row justify-content-evenly"
+                                style="width: 150px; height: 30px; margin-top: 24px;">
+                                <h5 style="text-align: center;color: #7c7575;">0%</h5>
+                                <div class="task-overdue"></div>
+                                <i class="fa-solid fa-ellipsis-vertical fs-6"
+                                    style="margin-top: 5px;color: #7c7575;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <div class="d-flex flex-row justify-content-between section-tasks" style="margin-top: 20px;">
+                            <!-- <h1>dog</h1> -->
+                            <div class="d-flex flex-row justify-content-between p-2">
+
+                                <i class="fa-solid fa-circle-info"
+                                    style="font-size: larger; margin-top: 17px;margin-left: -6px;"></i>
+
+                                <div class="course-container">
+                                    <h6 class="fs-6">Foundational Neuroscience (COMAT)</h6>
+                                    <div class="d-flex flex-row">
+                                        <div class="bg-danger due-date">Due: May 27, 2023 4:59pm</div> <span
+                                        class="task-status"
+                                            style="color:#7c7575">Learning Path</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="d-flex flex-row justify-content-evenly"
+                                style="width: 150px; height: 30px; margin-top: 24px;">
+                                <h5 style="text-align: center;color: #7c7575;">0%</h5>
+                                <div class="task-overdue"></div>
+                                <i class="fa-solid fa-ellipsis-vertical fs-6"
+                                    style="margin-top: 5px;color: #7c7575;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <div class="d-flex flex-row justify-content-between section-tasks" style="margin-top: 20px;">
+                            <!-- <h1>dog</h1> -->
+                            <div class="d-flex flex-row justify-content-between p-2">
+
+                                <i class="fa-solid fa-circle-info"
+                                    style="font-size: larger; margin-top: 17px;margin-left: -6px;"></i>
+
+                                <div class="course-container">
+                                    <h6 class="fs-6">Foundational Neuroscience (COMAT)</h6>
+                                    <div class="d-flex flex-row">
+                                        <div class="bg-danger due-date">Due: May 27, 2023 4:59pm</div> <span
+                                        class="task-status"
+                                            style="color:#7c7575">Learning Path</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="d-flex flex-row justify-content-evenly"
+                                style="width: 150px; height: 30px; margin-top: 24px;">
+                                <h5 style="text-align: center;color: #7c7575;">0%</h5>
+                                <div class="task-overdue"></div>
+                                <i class="fa-solid fa-ellipsis-vertical fs-6"
+                                    style="margin-top: 5px;color: #7c7575;"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- </div> -->
 
             </div>
 
